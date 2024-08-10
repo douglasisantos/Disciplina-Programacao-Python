@@ -1,0 +1,16 @@
+#Faça um Programa que calcule a área de um quadrado, em seguida mostre o dobro desta área para o usuário
+def calcular_area_quadrado(lado):
+    return lado * lado
+
+def main():
+    try:
+        lado = float(input("Digite o comprimento do lado do quadrado: "))
+        area = calcular_area_quadrado(lado)
+        dobro_area = area * 2
+        print(f"A área do quadrado é: {area:.2f} unidades²")
+        print(f"O dobro da área é: {dobro_area:.2f} unidades²")
+    except ValueError:
+        print("Por favor, insira um número válido.")
+
+if __name__ == "__main__":
+    main()

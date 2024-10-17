@@ -1,4 +1,7 @@
-def substituir_palavra(arquivo):
+def substituir_palavra():
+    # Solicitar ao usuário o caminho e nome do arquivo
+    arquivo = input("Digite o caminho e nome do arquivo: ")
+    
     # Solicitar ao usuário a palavra ou expressão a ser substituída
     palavra_antiga = input("Digite a palavra ou expressão a ser substituída: ")
     palavra_nova = input("Digite a nova palavra ou expressão: ")
@@ -18,9 +21,9 @@ def substituir_palavra(arquivo):
         print(f"A palavra ou expressão '{palavra_antiga}' foi substituída por '{palavra_nova}' com sucesso.")
     
     except FileNotFoundError:
-        print("Arquivo não encontrado. Verifique o nome do arquivo e tente novamente.")
+        print("Arquivo não encontrado. Verifique o caminho e o nome do arquivo e tente novamente.")
     except Exception as e:
         print(f"Ocorreu um erro: {e}")
 
 # Exemplo de uso
-substituir_palavra('seu_arquivo.txt')
+substituir_palavra()

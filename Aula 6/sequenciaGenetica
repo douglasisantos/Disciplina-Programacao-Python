@@ -1,0 +1,21 @@
+def ler_arquivo(nome_arquivo):
+    with open(nome_arquivo, 'r') as file:
+        sequencia = file.read().strip()  # Lê a sequência e remove espaços em branco
+    return sequencia
+
+def contar_ocorrencias(sequencia, pesquisa):
+    return sequencia.count(pesquisa)
+
+def main():
+    nome_arquivo = 'sequencia_10milhoes.txt'  # Nome do arquivo contendo a sequência
+    sequencia = ler_arquivo(nome_arquivo).upper()  # Converte a sequência para maiúsculas
+    
+    print("Sequência genética carregada com sucesso.")
+    print("Digite a expressão genética que deseja pesquisar:")
+    pesquisa = input().strip().upper()  # Lê e converte a expressão para maiúsculas
+    
+    ocorrencias = contar_ocorrencias(sequencia, pesquisa)
+    print(f"A expressão '{pesquisa}' ocorre {ocorrencias} vezes na sequência.")
+
+if __name__ == "__main__":
+    main()
